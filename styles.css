@@ -1,0 +1,145 @@
+:root {
+  --bg: #f6f4fb;
+  --card: #ffffff;
+  --text: #1f1b2e;
+  --muted: #5e5873;
+  --accent: #7b4ce2;
+  --accent-dark: #5c32b8;
+  --border: #e3ddf2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.topbar {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.topbar p {
+  opacity: 0.92;
+  margin-top: 0.25rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(31, 27, 46, 0.05);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+input,
+button {
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+button {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--accent-dark);
+}
+
+.lista {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lista li {
+  background: var(--bg);
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.chat-box {
+  min-height: 180px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.msg {
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  max-width: 85%;
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.msg.bot {
+  align-self: flex-start;
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+.chat-form {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.chat-form input {
+  flex: 1;
+}
+
+.map-box {
+  width: 100%;
+  height: 320px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #eae6f5;
+  margin-bottom: 0.9rem;
+}
