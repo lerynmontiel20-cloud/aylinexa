@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetCare AI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🐾 PetCare AI</h1>
+    <p>Registro de mascotas, establecimientos cercanos y asistente con IA</p>
+  </header>
+
+  <main class="container">
+    <!-- Registro y listado de mascotas -->
+    <section class="card">
+      <h2>Mis mascotas</h2>
+      <form id="mascota-form">
+        <input type="text" id="nombre" placeholder="Nombre (ej. Luna)" required />
+        <input type="text" id="especie" placeholder="Especie (ej. Perro / Gato)" required />
+        <input type="text" id="raza" placeholder="Raza (opcional)" />
+        <button type="submit">Guardar mascota</button>
+      </form>
+      <ul id="mascotas-lista"></ul>
+    </section>
+
+    <!-- Mapa y establecimientos -->
+    <section class="card">
+      <h2>Veterinarias y PetShops</h2>
+      <div id="map" class="map-box"></div>
+      <ul id="establecimientos-lista"></ul>
+    </section>
+
+    <!-- Chat con Gemini AI -->
+    <section class="card">
+      <h2>Asistente PetCare (Gemini AI)</h2>
+      <div id="chat-mensajes" class="chat-box"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Preguntá sobre cuidados, vacunas o alimentación..." required />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
